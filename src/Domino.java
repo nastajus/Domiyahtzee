@@ -6,20 +6,27 @@ import java.util.ArrayList;
 public class Domino {
 
     static int creationDieSideCounter = 1;
-    static int creationDieSideMax = 1;
+    static int creationDieSideMax = 6;
 
     static ArrayList<Domino> where;
 
     Piece kind;
     int val1;
-    int val2;   //nullable?
+    Integer val2;   //nullable.
     int where1;
-    int where2; //nullable?
+    Integer where2; //nullable.
 
-    Domino(Piece kind, int val1, int val2){
-        
+    Domino(Piece kind, int val1, Integer val2){
+        this.kind = kind;
+        this.val1 = val1;
+        this.val2 = val2;
     }
 
+    @Override
+    public String toString(){
+        if (val2 != null) return val1 + ":" + val2;
+        else return val1 + "";
+    }
 
 
 }
