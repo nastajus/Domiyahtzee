@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by IAN on 21/11/14.
@@ -27,6 +28,15 @@ public class Domino {
         if (val2 != null) return val1 + ":" + val2;
         else return val1 + "";
     }
+
+    public Domino get(){
+        return this;
+    }
+
+
+//    @Override
+//    contains()
+      //idea canceled, didn't want to clutter my code with so many overrides.
 
 
 }

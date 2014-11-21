@@ -29,6 +29,33 @@ public class Game {
     //later refactor to utilize input.txt.
     void Populate(){
         //For now hard-coding.
-        
+        //find specific domino.
+        Domino d;
+
+        //success test
+        d = getDomino(reserve, 3,3);
+        System.out.println(d.toString());
+
+        //fail test
+        d = getDomino(reserve, 66,55);
+        System.out.println(d.toString());
+
+    }
+
+    //area == using on table or in reserve area.
+    Domino getDomino(List<Domino> area, int val1, Integer val2){
+        for(Domino d : area){
+            if ( d.get().val1 == val1 && d.get().val2.equals(val2) ||  d.get().val1 == val2 && d.get().val2.equals(val1) ){
+                return d.get();
+            }
+        }
+        return null;
+    }
+
+
+
+    //optional?
+    private void Place(){
+
     }
 }
